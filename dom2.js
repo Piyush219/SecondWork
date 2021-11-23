@@ -17,10 +17,21 @@ function onSubmit(e){
         console.log('success')
     }
 
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+    
+    localStorage.setItem('Name:', nameInput.value)
+    localStorage.setItem('Email:', emailInput.value)
 
-    userList.appendChild(li);
+    /* var array = JSON.parse(localStorage.getItem('Name:') || '[]');
+    array.push(nameInput);
+    localStorage.setItem('Name:', JSON.stringify(array));
+
+    var earray = JSON.parse(localStorage.getItem('Email:') || '[]');
+    earray.push(emailInput);
+    localStorage.setItem('Email:', JSON.stringify(earray)); */
+    //const li = document.createElement('li');
+   //  li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+    //userList.appendChild(li);
 
     //
     nameInput.value = '';
